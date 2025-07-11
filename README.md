@@ -181,22 +181,5 @@ This calculator helps users understand their daily carbon footprint and identify
 - **Energy**: Improve home insulation, use renewable energy
 - **Food**: Reduce meat consumption, buy local products
 
-## 🤝 Contributing
 
-Feel free to contribute by:
-1. Adding more emission factors
-2. Improving calculation accuracy
-3. Adding new categories (waste, consumption, etc.)
-4. Enhancing the user interface
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 📞 Support
-
-If you have questions or need help with the exercise, please open an issue in this repository.
-
----
-
-**🎯 Ready to build your carbon footprint calculator? Start with Step 1 and work your way through each function!**
