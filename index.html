@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Workshop - Calculatrice Empreinte Carbone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1><i class="fas fa-calculator"></i> Calculatrice Empreinte Carbone</h1>
+            <p>Calculez votre impact environnemental quotidien</p>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="calculator">
+            <!-- Section Transport -->
+            <div class="section">
+                <h3><i class="fas fa-car"></i> Transport</h3>
+                
+                <div class="form-group">
+                    <label for="carKm">Distance quotidienne en voiture :</label>
+                    <div class="input-group">
+                        <input type="number" id="carKm" placeholder="Ex: 25" min="0">
+                        <span class="unit">km</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="carType">Type de véhicule :</label>
+                    <select id="carType">
+                        <option value="1.8">Essence (moyenne)</option>
+                        <option value="1.6">Diesel</option>
+                        <option value="0.5">Hybride</option>
+                        <option value="0.1">Électrique</option>
+                        <option value="2.3">SUV</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="publicTransport">Transport en commun :</label>
+                    <div class="input-group">
+                        <input type="number" id="publicTransport" placeholder="Ex: 10" min="0">
+                        <span class="unit">km</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Énergie -->
+            <div class="section">
+                <h3><i class="fas fa-bolt"></i> Énergie domestique</h3>
+                
+                <div class="form-group">
+                    <label for="electricity">Consommation électrique mensuelle :</label>
+                    <div class="input-group">
+                        <input type="number" id="electricity" placeholder="Ex: 350" min="0">
+                        <span class="unit">kWh</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="heating">Type de chauffage :</label>
+                    <select id="heating">
+                        <option value="0.4">Électricité</option>
+                        <option value="0.2">Gaz naturel</option>
+                        <option value="0.3">Fioul</option>
+                        <option value="0.1">Pompe à chaleur</option>
+                        <option value="0.05">Solaire</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Section Alimentation -->
+            <div class="section">
+                <h3><i class="fas fa-utensils"></i> Alimentation</h3>
+                
+                <div class="form-group">
+                    <label for="meat">Repas avec viande par semaine :</label>
+                    <div class="input-group">
+                        <input type="number" id="meat" placeholder="Ex: 10" min="0" max="21">
+                        <span class="unit">repas</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="local">Pourcentage d'aliments locaux :</label>
+                    <div class="input-group">
+                        <input type="number" id="local" placeholder="Ex: 30" min="0" max="100">
+                        <span class="unit">%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bouton de calcul -->
+            <button class="btn" id="calculateBtn">
+                <i class="fas fa-calculator"></i>
+                Calculer mon empreinte
+            </button>
+
+            <!-- Résultats -->
+            <div class="results" id="results">
+                <div class="total-emission" id="totalEmission">0</div>
+                <div class="total-label">kg CO₂ par jour</div>
+
+                <!-- Indicateur de niveau -->
+                <div class="level-indicator">
+                    <span class="level-text" id="levelText">Excellent</span>
+                    <div class="level-bar">
+                        <div class="level-fill" id="levelFill"></div>
+                    </div>
+                </div>
+
+                <!-- Détails par catégorie -->
+                <div class="breakdown" id="breakdown">
+                    <!-- Généré dynamiquement -->
+                </div>
+
+                <!-- Recommandations -->
+                <div class="recommendation">
+                    <h4><i class="fas fa-lightbulb"></i> Recommandations personnalisées</h4>
+                    <ul class="tips" id="tips">
+                        <!-- Généré dynamiquement -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+   
+</body>
+</html>
